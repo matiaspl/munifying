@@ -1,5 +1,11 @@
 # munifying by Marcus Mengs (@MaMe82)
 
+PATCHED to allow reflashing a CU0016 "Unifing Plus" (Texas Instruments CC25xx) dongle bought of AliExpress to a non-unifying Spotlight dongle (the original broke in two... :) )
+
+Flashed RQR24.11_B0036 to RQR41.01.B0007
+
+Tested, works just fine.
+
 The tool `munifying` could be used to interact with Logitech receivers from USB side (not RF).
 This tool was developed during vulnerability research and is provided as-is.
 
