@@ -28,7 +28,7 @@ const (
 	PID_BOOT_LOADER_TI              gousb.ID = 0xaaac //CU0008 (JNZCU0008), tested BOT03.01_B0008 / RQR24.01_B0023
 	PID_BOOT_LOADER_TI_NANO         gousb.ID = 0xaaad //CU0012, tested BOT03.03_B0009 / RQR24.07_B0030
 	PID_BOOT_LOADER_LIGHTSPEED_G603 gousb.ID = 0xaabe //CU0008 (JNZCU0008a), tested BOT03.02_B0009 / RQR39.04_B0036
-	PID_BOOT_LOADER_TI_SPOTLIGHT    gousb.ID = 0xaad3 //CU0016, tested BOT03.02_B0009 / RQR41.00_B0004
+	PID_BOOT_LOADER_TI_SPOTLIGHT    gousb.ID = 0xaae5 //CU0016, patch to reflash a "Unifying Plus" dongle to Spotlight, tested BOT03.02_B0009 / RQR41.01_B0007
 	PID_BOOT_LOADER_TI_R500         gousb.ID = 0xaae1 //CU0016, tested BOT03.02_B0009 / RQR45.00_B0002
 )
 
