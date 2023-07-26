@@ -1,10 +1,22 @@
+## Patch info
+
+The one char patch allowed me to convert a CU0016 "Unifing Plus" dongle (Texas Instruments CC25xx based) bought of AliExpress to a non-unifying Spotlight dongle after the original broke in two... 
+
+I successfuly flashed a dongle running Unifying RQR24.11_B0036 firmware to Spotlight RQR41.01.B0007 firmware which effectively converted an "eQUAD DJ receiver" (USB PID 0xC52B) to an "eQuad Step4 Lite (Gurami)" (USB PID 0xC52E):
+
+ `./munifying flash -f RQR41.01_B0007.shex`
+
+(the firmware can be downloaded from here: https://github.com/Logitech/fw_updates/tree/master) 
+
+The Spotlight remote was able to pair with the "new" receiver" after running
+
+ `./munifying pair`
+
+and pressing two upper buttons on the remote.
+
+Tested, works fine.
+
 # munifying by Marcus Mengs (@MaMe82)
-
-PATCHED to allow reflashing a CU0016 "Unifing Plus" (Texas Instruments CC25xx) dongle bought of AliExpress to a non-unifying Spotlight dongle (the original broke in two... :) )
-
-Flashed RQR24.11_B0036 to RQR41.01.B0007
-
-Tested, works just fine.
 
 The tool `munifying` could be used to interact with Logitech receivers from USB side (not RF).
 This tool was developed during vulnerability research and is provided as-is.
