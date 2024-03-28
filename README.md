@@ -1,6 +1,6 @@
 ## Patch info
 
-The one char patch allowed me to convert a CU0016 "Unifing Plus" dongle (Texas Instruments CC25xx based) bought of AliExpress to a non-unifying Spotlight dongle after the original broke in two... 
+The one char patch allowed me to convert a CU0016 "Unifing Plus" dongle (Texas Instruments CC25xx based) bought of AliExpress to a non-unifying Spotlight presentation remote dongle after the original broke in two... 
 
 I successfuly flashed a dongle running Unifying RQR24.11_B0036 firmware to Spotlight RQR41.01.B0007 firmware which effectively converted an "eQUAD DJ receiver" (USB PID 0xC52B) to an "eQuad Step4 Lite (Gurami)" (USB PID 0xC52E):
 
