@@ -126,17 +126,19 @@ var pairCmd = &cobra.Command{
 			} else {
 				if pairingAborted {
 					fmt.Println("Pairing aborted")
-					break
+					return
 				}
 			}
 		}
 
 		// re-evaluate paired devices and print
 
-		set,err := usb.GetSetInfo()
-		if err == nil {
-			fmt.Println(set.String())
+		set, err := usb.GetSetInfo()
+		if err != nil {
+			fmt.Println("Device paired. Run munifying info to retry the receiver summary.")
+			return
 		}
+		fmt.Println(set.String())
 
 	},
 }

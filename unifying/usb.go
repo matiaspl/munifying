@@ -660,17 +660,13 @@ func (u *LocalUSBDongle) GetDongleInfo() (res DongleInfo, err error) {
 		}
 		fmt.Println(r.String())
 	}
-	if dongleInfo1 == nil {
-		err = errors.New("couldn't read dongle info")
-		return
+	if err != nil {
+		return res, fmt.Errorf("couldn't read dongle serial: %v", err)
 	}
-
-	if err == nil && dongleInfo2 != nil {
-		res.Serial = dongleInfo2.Parameters[2:6]
-	} else {
-		fmt.Println("Couldn't read dongle serial")
+	if dongleInfo2 == nil {
+		return res, errors.New("couldn't read dongle serial: missing receiver information page 0x03")
 	}
-
+	res.Serial = dongleInfo2.Parameters[2:6]
 
 	responses, err = u.HIDPP_SendAndCollectResponses(0xff, HIDPP_MSG_ID_GET_REGISTER_REQ, []byte{byte(DONGLE_HIDPP_REGISTER_FIRMWARE_INFO), 0x04, 0x00})
 	for _, r := range responses {
